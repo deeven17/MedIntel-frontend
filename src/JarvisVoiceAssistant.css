@@ -1,0 +1,50 @@
+.jarvis-container { width: 100%; margin-bottom: 2rem; }
+.jarvis-card { background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); overflow: hidden; }
+.jarvis-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; text-align: center; }
+.jarvis-title { font-size: 1.3rem; font-weight: 700; margin: 0 0 8px 0; }
+.jarvis-subtitle { font-size: 0.95rem; margin: 0; opacity: 0.95; }
+.jarvis-error { background: #fee2e2; color: #991b1b; padding: 12px 16px; margin: 12px; border-radius: 8px; border-left: 4px solid #f56565; display: flex; justify-content: space-between; align-items: center; font-size: 0.95rem; }
+.jarvis-error-close { background: none; border: none; color: #991b1b; font-size: 1.5rem; cursor: pointer; padding: 0; width: 24px; height: 24px; }
+.jarvis-status { padding: 16px; background: #f8fafc; border-bottom: 1px solid #e2e8f0; }
+.jarvis-status-main { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.jarvis-status-text { font-weight: 600; color: #374151; font-size: 1rem; }
+.jarvis-live-indicator { color: #ef4444; font-size: 1.2rem; animation: jarvis-pulse 1s infinite; }
+@keyframes jarvis-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+.jarvis-progress { display: flex; align-items: center; gap: 12px; }
+.jarvis-progress-bar { flex: 1; height: 8px; background: #e5e7eb; border-radius: 4px; overflow: hidden; }
+.jarvis-progress-fill { height: 100%; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 4px; transition: width 0.3s ease; }
+.jarvis-progress-text { font-size: 0.85rem; color: #6b7280; font-weight: 600; min-width: 50px; }
+.jarvis-guidance { padding: 12px 16px; background: #dbeafe; margin: 12px; border-radius: 8px; border-left: 3px solid #3b82f6; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.jarvis-guidance-label { font-weight: 600; color: #1e40af; font-size: 0.9rem; }
+.jarvis-guidance-text { color: #1e40af; font-size: 0.9rem; font-weight: 500; }
+.jarvis-interim { padding: 12px 16px; background: #f0f9ff; margin: 12px; border-radius: 8px; border-left: 3px solid #0284c7; display: flex; gap: 10px; align-items: center; }
+.jarvis-interim-label { font-weight: 600; color: #0c4a6e; font-size: 0.9rem; }
+.jarvis-interim-text { color: #0c4a6e; font-style: italic; font-size: 0.9rem; }
+.jarvis-collected { padding: 12px 16px; background: #f0fdf4; margin: 12px; border-radius: 8px; border-left: 3px solid #10b981; }
+.jarvis-collected-title { font-weight: 600; color: #065f46; font-size: 0.9rem; margin: 0 0 8px 0; }
+.jarvis-collected-items { display: grid; gap: 6px; }
+.jarvis-collected-item { display: flex; gap: 10px; font-size: 0.85rem; color: #047857; }
+.jarvis-collected-key { font-weight: 600; min-width: 60px; }
+.jarvis-collected-value { color: #059669; }
+.jarvis-controls { display: flex; gap: 10px; padding: 16px; flex-wrap: wrap; }
+.jarvis-btn { flex: 1; min-width: 140px; padding: 12px 20px; border: none; border-radius: 8px; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.jarvis-btn-start { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3); }
+.jarvis-btn-start:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4); }
+.jarvis-btn-stop { background: #ef4444; color: white; flex: 1; }
+.jarvis-btn-stop:hover:not(:disabled) { background: #dc2626; transform: translateY(-2px); }
+.jarvis-btn-reset { background: #f59e0b; color: white; flex: 1; }
+.jarvis-btn-reset:hover:not(:disabled) { background: #d97706; transform: translateY(-2px); }
+.jarvis-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.jarvis-instructions { padding: 16px; background: #fef3c7; border-top: 1px solid #fcd34d; color: #78350f; font-size: 0.9rem; }
+.jarvis-instructions p { margin: 0 0 8px 0; }
+.jarvis-instructions ul { margin: 0; padding-left: 20px; }
+.jarvis-instructions li { margin-bottom: 6px; line-height: 1.4; }
+@media (max-width: 640px) {
+  .jarvis-controls { flex-direction: column; }
+  .jarvis-btn { width: 100%; min-width: auto; }
+  .jarvis-interim { flex-direction: column; gap: 6px; }
+  .jarvis-guidance { flex-direction: column; gap: 6px; }
+  .jarvis-header { padding: 16px; }
+  .jarvis-title { font-size: 1.1rem; }
+  .jarvis-subtitle { font-size: 0.85rem; }
+}
